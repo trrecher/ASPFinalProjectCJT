@@ -59,7 +59,7 @@
         <tr>
             <td>Datetime of Refill:</td>
             <td>
-                <asp:TextBox ID="txtDatetimeRefill" runat="server" TextMode="DateTime"></asp:TextBox>
+                <asp:TextBox ID="txtDatetimeRefill" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDatetimeRefill" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -85,7 +85,6 @@
                                 <asp:Label ID="lblPrescriptionID" runat="server" Text="RxNumber: "></asp:Label>
                             </td>
                             <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="TextBox1" runat="server" TextMode="Number"></asp:TextBox>
                             </td>
                             <td>
@@ -100,7 +99,6 @@
                         <tr>
                             <td>Patient Name:</td>
                             <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
                             </td>
                             <td>
@@ -112,7 +110,6 @@
                         <tr>
                             <td>Physician Name: </td>
                             <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhysicianName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="txtPhysicianName" runat="server"></asp:TextBox>
                             </td>
                             <td>Prescribed Date Range Stop: </td>

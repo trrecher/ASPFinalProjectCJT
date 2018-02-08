@@ -52,7 +52,6 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="txtRxNumber" runat="server" TextMode="Number"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Drug Name:
@@ -67,7 +66,6 @@
                             <td>Patient Name:</td>
                             <td>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Prescribed Date Range Start: </td>
@@ -79,7 +77,6 @@
                             <td>Physician Name: </td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianName" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhysicianName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>Prescribed Date Range Stop: </td>
                             <td>
@@ -125,6 +122,8 @@
                                         <asp:ImageButton ID="imgDelete" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID)%>" CommandName="lbtnDelete" Height="30" ImageUrl="~/images/delete.jpg" OnCommand="Delete_Click" Width="30" />
                                         ||
                                         <asp:ImageButton ID="imgEdit" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID) %>" CommandName="lbtnEdit" Height="30" ImageUrl="~/images/edit.jpg" OnCommand="lbtnEdit_Click" Width="30" />
+                                        ||
+                                        <asp:ImageButton ID="imgAddRefill" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID) %>" CommandName="lbtnAddRefill" Height="30" ImageUrl="~/images/plus.jpg" OnCommand="lbtnAddRefill_Click" Width="30" />
                                     </ItemTemplate>
                                     <HeaderStyle HorizontalAlign="Left" />
                                 </asp:TemplateField>

@@ -171,4 +171,19 @@ Partial Class Search_Prescription
 
     End Sub
 
+    Friend Sub lbtnAddRefill_Click(ByVal sender As Object, ByVal e As CommandEventArgs)
+        Dim recordToBeFilled As String
+
+        Try
+
+            'Get the record
+            recordToBeFilled = Trim(e.CommandArgument)
+
+            Response.Redirect("Add_Refill.aspx?RxNumber=" + recordToBeFilled, False)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex.InnerException)
+        End Try
+
+    End Sub
+
 End Class

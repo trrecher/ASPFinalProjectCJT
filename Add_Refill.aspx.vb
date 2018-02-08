@@ -143,4 +143,10 @@ Partial Class Add_Refill
             lblError.Text = "Trouble connecting to Database"
         End If
     End Sub
+
+    Private Sub Add_Refill_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Not Page.IsPostBack And Request.QueryString("RxNumber") <> Nothing Then
+            txtRxNumber.Text = Request.QueryString("RxNumber")
+        End If
+    End Sub
 End Class

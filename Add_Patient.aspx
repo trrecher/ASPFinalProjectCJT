@@ -68,7 +68,7 @@
                 <tr>
                     <td style="text-align: right" class="auto-style2">Home Phone:</td>
                     <td>
-                        <asp:TextBox ID="txtHomePhone" runat="server" TextMode="Phone"></asp:TextBox>
+                        <asp:TextBox ID="txtHomePhone" runat="server" ></asp:TextBox>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="xxx-xxx-xxxx" ControlToValidate="txtHomePhone" ValidationExpression="^(?=(?:\D*\d){10,15}\D*$)\+?[0-9]{1,3}[\s-]?(?:\(0?[0-9]{1,5}\)|[0-9]{1,5})[-\s]?[0-9][\d\s-]{5,7}\s?(?:x[\d-]{0,4})?$" ></asp:RegularExpressionValidator>
 
                     </td>
@@ -76,7 +76,7 @@
                 <tr>
                     <td style="text-align: right" class="auto-style2">Cell Phone:</td>
                     <td>
-                        <asp:TextBox ID="txtCellPhone" runat="server" TextMode="Phone"></asp:TextBox>
+                        <asp:TextBox ID="txtCellPhone" runat="server"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="xxx-xxx-xxxx" ControlToValidate="txtCellPhone" ValidationExpression="^(?=(?:\D*\d){10,15}\D*$)\+?[0-9]{1,3}[\s-]?(?:\(0?[0-9]{1,5}\)|[0-9]{1,5})[-\s]?[0-9][\d\s-]{5,7}\s?(?:x[\d-]{0,4})?$" ></asp:RegularExpressionValidator>
 
                     </td>

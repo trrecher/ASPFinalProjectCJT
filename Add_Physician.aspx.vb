@@ -31,7 +31,23 @@ Partial Class Add_Physician
 
 
         If outcome = 1 Then
-            lblError.Text = "Record Added"
+            lblError.Text = "Record Added Successfully"
+            'clear txtboxes when successful
+            With Me
+                txtFName.Text = ""
+                txtLName.Text = ""
+                txtMiddleInitial.Text = ""
+                'txtDOB.
+                ddlGender.SelectedIndex = 0
+                txtSpecialty.Text = ""
+                txtSalary.Text = ""
+                txtCellPhone.Text = ""
+                txtEmail.Text = ""
+                txtStreetAddress.Text = ""
+                txtCity.Text = ""
+                ddlState.SelectedIndex = 0
+                txtZip.Text = ""
+            End With
         ElseIf outcome = 0 Then
             lblError.Text = "Input Error"
         Else

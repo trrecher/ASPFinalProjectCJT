@@ -31,7 +31,8 @@ Partial Class Add_Patient
 
 
         If outcome = 1 Then
-            lblError.Text = "Record Added"
+            lblError.Text = "Record Added Successfully"
+            'clear txtboxes when successful
             With Me
                 txtFName.Text = ""
                 txtLName.Text = ""
@@ -45,9 +46,8 @@ Partial Class Add_Patient
                 txtCity.Text = ""
                 ddlState.SelectedIndex = 0
                 txtZip.Text = ""
-
-
             End With
+
         ElseIf outcome = 0 Then
             lblError.Text = "Input Error"
         Else

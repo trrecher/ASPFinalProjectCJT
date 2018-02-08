@@ -9,12 +9,14 @@
                     <td style="text-align: right">First Name:</td>
                     <td>
                         <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">Last Name:</td>
                     <td>
                         <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -31,6 +33,7 @@
                     <td style="text-align: right">Date of Birth:</td>
                     <td>
                         <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDOB" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -38,6 +41,7 @@
                     <td>
                         <asp:DropDownList ID="ddlGender" runat="server">
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlGender" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

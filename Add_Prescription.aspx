@@ -81,6 +81,7 @@
             <td>
                 <asp:TextBox ID="txtPatientID" runat="server" TextMode="Number"></asp:TextBox>
                 <asp:Button ID="btnPatientID" runat="server" Text="..." />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPatientID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -92,6 +93,7 @@
             <td>
                 <asp:TextBox ID="txtPhysicianID" runat="server" TextMode="Number"></asp:TextBox>
                 <asp:Button ID="btnPhysicianID" runat="server" Text="..." />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPhysicianID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -102,6 +104,7 @@
             <td>Medicine Name:</td>
             <td>
                 <asp:TextBox ID="txtMName" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtMName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -118,6 +121,7 @@
             <td>Prescribed Date:</td>
             <td>
                 <asp:TextBox ID="txtPrescribedDate" runat="server" TextMode="Date"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPrescribedDate" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -176,6 +180,7 @@
                                 <asp:Label ID="lblPatientID" runat="server" Text="Patient ID: "></asp:Label>
                             </td>
                             <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPatientID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="TextBox1" runat="server" TextMode="Number"></asp:TextBox>
                             </td>
                             <td>
@@ -189,6 +194,7 @@
                         <tr>
                             <td>Patient Name:</td>
                             <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
                             </td>
                             <td>

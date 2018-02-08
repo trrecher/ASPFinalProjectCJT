@@ -52,6 +52,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="txtPatientName" runat="server" TextMode="Number"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Prescribed Date Range Start:</td>
@@ -65,6 +66,7 @@
                             <td>Physician Name:</td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianName" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhysicianName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Prescribed Date Range Stop:</td>
@@ -86,6 +88,7 @@
                             <td>Refill ID: </td>
                             <td>
                                 <asp:TextBox ID="txtRefillID" runat="server" TextMode="Number"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtRefillID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>Refill Date Range Stop:</td>
                             <td>
@@ -100,6 +103,7 @@
                                 RxNumber:</td>
                             <td>
                                 <asp:TextBox ID="txtRxNumber" runat="server" TextMode="Number"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>

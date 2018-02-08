@@ -9,7 +9,7 @@
 <br />
     <!-- Table for pics & contact info -->
       <div>
-        <table style="text-align:center" align="center">
+        <table style="text-align:center; width:100%" align="center">
             <tbody><tr>
                 <td>
                     <img style="height:100%; width:75%" alt="Justin Gochenaur" class="auto-style1" src="images/justin.png"/>
@@ -51,8 +51,7 @@
                 </td>
                
             </tr>
-                <tr><td></td></tr>
-                <tr><td></td></tr>
+ 
 
         </tbody></table>
         </div>
@@ -60,7 +59,7 @@
               <h3>Louis' Pharmacy has been around for nearly thirty years providing service to all the locals in the Lancaster, Pennsylvania area. We pride ourselves on 
                         quality and being efficient. We all have been in need, and those needs all need satisfied to some degree. Many of folks in the area come to us and we continue
                         to satisfy them over and over. We never leave anyone out high and dry. We compete to be the best, and we will no settle for less. Come on in if you need your meds
-                        filled or anything else you think you may need. We are here Sunday through Friday 9:00 AM to 5:00 PM.</h3>
+                        filled or anything else you think you may need. We are here Monday through Friday 9:00 AM to 5:00 PM.</h3>
           </div>
   
           <div id="map" style="width:100%;height:525px"></div>

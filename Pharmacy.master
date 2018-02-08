@@ -118,6 +118,18 @@
 
               
         
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+   
+
+
+         
+
+              
+        
 </head>
 
 <body style="background-color:steelblue">
@@ -168,23 +180,24 @@
         </asp:ContentPlaceHolder>
         <div><br /><br /></div>
     </form>
-   <br />
-        <article id="wrap">
-	<article id="lightings">
-    	<section id="one">
-            <section id="two">
-                <section id="three">
-                    <section id="four">
-                        <section id="five">
-                            
-                        </section>
-                    </section>
-                </section>
-            </section>
-		</section>
-    </article>
-</article>
+  <footer>
 
-    
+
+      <table class="auto-style1">
+          <tr>
+              <td>Contact</td>
+              <td>Location</td>
+              <td>Hours</td>
+          </tr>
+          <tr>
+              <td>717-867-5309</td>
+              <td>150 King Street <br />
+                  Lancaster Pa 17602</td>
+              <td>Monday-Friday 9:00-5:00</td>
+          </tr>
+      </table>
+
+
+  </footer>
 </body>
 </html>

@@ -10,14 +10,18 @@
                     <td>
                         <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
-                    </td>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtFName" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$" ></asp:RegularExpressionValidator>
+                        </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">Last Name:</td>
                     <td>
                         <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
-                    </td>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtFName" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$" ></asp:RegularExpressionValidator>
+
+                   
+                        </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">Middle Initial:</td>
@@ -33,8 +37,9 @@
                     <td style="text-align: right">Date of Birth:</td>
                     <td>
                         <asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDOB" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
-                    </td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDOB" ErrorMessage="Please enter alphabet characters!">*</asp:RequiredFieldValidator>
+                   
+                        </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">Gender:</td>
@@ -44,7 +49,7 @@
                             <asp:ListItem Value="FEMALE">Female</asp:ListItem>
                             <asp:ListItem>NA</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlGender" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlGender" ErrorMessage="Please enter alphabet characters!">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

@@ -1,4 +1,6 @@
 ﻿
+Imports StateManager
+
 Partial Class Add_Patient
     Inherits System.Web.UI.Page
 
@@ -34,6 +36,16 @@ Partial Class Add_Patient
             lblError.Text = "Input Error"
         Else
             lblError.Text = "Problem Connecting to Database"
+        End If
+    End Sub
+
+    Private Sub Add_Patient_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Not Page.IsPostBack Then
+            Dim aState As state() = getStates()
+            ddlState.DataSource = aState
+            ddlState.DataValueField = "Abbreviation"
+            ddlState.DataTextField = "Name"
+            ddlState.DataBind()
         End If
     End Sub
 End Class

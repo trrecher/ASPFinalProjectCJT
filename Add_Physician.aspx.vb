@@ -38,4 +38,14 @@ Partial Class Add_Physician
             lblError.Text = "Problem Connecting to Database"
         End If
     End Sub
+
+    Private Sub Add_Physician_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Not Page.IsPostBack Then
+            Dim aState As state() = getStates()
+            ddlState.DataSource = aState
+            ddlState.DataValueField = "Abbreviation"
+            ddlState.DataTextField = "Name"
+            ddlState.DataBind()
+        End If
+    End Sub
 End Class

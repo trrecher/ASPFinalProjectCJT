@@ -14,6 +14,7 @@
             <td>Refill ID:</td>
             <td>
                 <asp:TextBox ID="txtRefillID" runat="server" TextMode="Number"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRefillID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -24,6 +25,7 @@
             <td>Date of Refill:</td>
             <td>
                 <asp:TextBox ID="txtRefillDateTime" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRefillDateTime" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
     </table>

@@ -52,6 +52,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianID" runat="server" TextMode="Number"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPhysicianID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 DOB Range Start:
@@ -60,17 +61,21 @@
 
                                 <asp:TextBox ID="txtPhysicianDOBStart" runat="server" TextMode="Date"></asp:TextBox>
 
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPhysicianDOBStart" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
+
                             </td>
                         </tr>
                         <tr>
                             <td>Physician Name:</td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianName" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPhysicianName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 DOB Range Stop:</td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianDOBStop" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhysicianDOBStop" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -81,6 +86,7 @@
                                 Physician Specialty:</td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianSpecialty" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPhysicianSpecialty" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>

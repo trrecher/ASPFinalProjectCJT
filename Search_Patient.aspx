@@ -52,6 +52,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="txtPatientID" runat="server" TextMode="Number"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 <asp:label id="lblPatientDOBStart" runat="server" Text="Date of Birth Range Start" />
@@ -59,18 +60,21 @@
                             </td>
                             <td>
                                 <asp:textbox id="txtPatientDOBStart" runat="server" TextMode="Date" />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPatientDOBStart" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
                             <td>Patient Name:</td>
                             <td>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
-                                <asp:label id="lblPatientDOBStop" runat="server" Text="Date of Birth Range Start" />
+                                <asp:label id="lblPatientDOBStop" runat="server" Text="Date of Birth Range Stop" />
                             </td>
                             <td>
                                 <asp:textbox id="txtPatientDOBStop" runat="server" TextMode="Date" />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPatientDOBStop" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 </td>
                         </tr>
                         <tr>

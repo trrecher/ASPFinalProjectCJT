@@ -16,6 +16,8 @@
             <td>
                 <asp:TextBox ID="txtRxNumber" runat="server" Enabled="False" TextMode="Number"></asp:TextBox>
 
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
+
             </td>
         </tr>
         <tr>

@@ -40,6 +40,9 @@
                     <td style="text-align: right">Gender:</td>
                     <td>
                         <asp:DropDownList ID="ddlGender" runat="server">
+                            <asp:ListItem Value="MALE">Male</asp:ListItem>
+                            <asp:ListItem Value="FEMALE">Female</asp:ListItem>
+                            <asp:ListItem>NA</asp:ListItem>
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlGender" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>

@@ -59,7 +59,6 @@
                             </td>
                             <td>
                                 <asp:textbox id="txtPatientDOBStart" runat="server" TextMode="Date" />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -72,7 +71,6 @@
                             </td>
                             <td>
                                 <asp:textbox id="txtPatientDOBStop" runat="server" TextMode="Date" />
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator">*</asp:RegularExpressionValidator>
                                 </td>
                         </tr>
                         <tr>

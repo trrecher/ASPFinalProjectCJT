@@ -59,7 +59,7 @@
         <tr>
             <td>Datetime of Refill:</td>
             <td>
-                <asp:TextBox ID="txtDatetimeRefill" runat="server" TextMode="DateTime"></asp:TextBox>
+                <asp:TextBox ID="txtDatetimeRefill" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDatetimeRefill" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>

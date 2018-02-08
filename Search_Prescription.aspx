@@ -52,7 +52,6 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="txtRxNumber" runat="server" TextMode="Number"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Drug Name:
@@ -67,7 +66,6 @@
                             <td>Patient Name:</td>
                             <td>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Prescribed Date Range Start: </td>
@@ -79,7 +77,6 @@
                             <td>Physician Name: </td>
                             <td>
                                 <asp:TextBox ID="txtPhysicianName" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPhysicianName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                             </td>
                             <td>Prescribed Date Range Stop: </td>
                             <td>

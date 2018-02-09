@@ -189,27 +189,8 @@
         
         <div><br /><br /></div>
     </form>
-<<<<<<< HEAD
-  <footer>
 
 
-      <table class="auto-style1" style="text-align:center">
-          <tr>
-              <td>Contact</td>
-              <td>Location</td>
-              <td>Hours</td>
-          </tr>
-          <tr>
-              <td>717-867-5309</td>
-              <td>150 King Street <br />
-                  Lancaster Pa 17602</td>
-              <td>Monday-Friday 9:00-5:00</td>
-          </tr>
-      </table>
-
-
-  </footer>
-=======
  <footer class="flex-rw">
   
 
@@ -237,6 +218,5 @@
       </div>
   </section>
 </footer>
->>>>>>> 0f00a04ffc1b34e9502ec845c4e0631feb0f0b3b
 </body>
 </html>

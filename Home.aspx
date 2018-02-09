@@ -18,7 +18,7 @@
                <div class="icon-block">
                    <div class="icon-block-headers"> <div class="desc"> <div style="text-align:center">
                      
-                       <p>New Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
+                       <p>xNew Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
                             <a href="Add_Physician.aspx" target="" class="icon-block-cta">Add New Physician </a>&nbsp;<br />  <br />
                                 
             </div></div></div>

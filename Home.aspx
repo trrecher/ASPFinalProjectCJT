@@ -1,15 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Pharmacy.master" AutoEventWireup="false" CodeFile="Home.aspx.vb" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style1 {
-            height: 400px;
-            width: 651px;
-            margin-left: 0px;
-            margin-top: 128px;
-        }
-    </style>
-
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -18,7 +10,7 @@
                <div class="icon-block">
                    <div class="icon-block-headers"> <div class="desc"> <div style="text-align:center">
                      
-                       <p>xNew Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
+                       <p>New Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
                             <a href="Add_Physician.aspx" target="" class="icon-block-cta">Add New Physician </a>&nbsp;<br />  <br />
                                 
             </div></div></div>

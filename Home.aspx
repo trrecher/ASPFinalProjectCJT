@@ -13,36 +13,43 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-        
+           
             <div class="icon-block-inner" style="height: 417px;">
-                       <div class="icon-block">
-                        <div class="icon-block-headers"> <div class="desc"> <div style="text-align:center">
-                    <br />  <br />
+               <div class="icon-block">
+                   <div class="icon-block-headers"> <div class="desc"> <div style="text-align:center">
+                     <br />
+                       <br />
                             <a href="Add_Physician.aspx" target="" class="icon-block-cta">Add New Physician </a>&nbsp;<br />  <br />
-                        <p>New Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
-                    </div></div></div><br />
-                    <br />
-                </div>
-                            <div class="icon-block">
-                        <div class="icon-block-headers"><div class="desc"><div style="text-align:center">
-                    <br />  <br />  
+                                <p>New Phyisican? No worries, if you are new with us we'll get you setup in no time.</p>
+            </div></div></div>
+            <br />
+            <br />
+            </div>
+                <div class="icon-block">
+                   <div class="icon-block-headers"><div class="desc"><div style="text-align:center">
+                    <br />  
+                     <br />  
                             <a href="Add_Prescription.aspx" target="" class="icon-block-cta">Add Prescription</a><br />  <br />
-                        <p>We make adding, updating and deleting prescriptions at Louis’s easy. Simply click here and follow the next steps.</p>
-                    </div></div></div><br />
-
-                    <br />
-                </div>   
-                            <div class="icon-block">
-                        <div class="icon-block-headers"><div class="desc"> <div style="text-align:center">
-                     <br/>  <br />  
-                            <a href="Add_Patient.aspx" target="" class="icon-block-cta">Add New Patient</a>
-                            <br />  <br />
+                                <p>We make adding, updating and deleting prescriptions at Louis’s easy. Simply click here and follow the next steps.</p>
+           </div></div></div><br />
+            <br />
+            </div>   
+                <div class="icon-block">
+                   <div class="icon-block-headers"><div class="desc"> <div style="text-align:center">
+                     <br/> 
+                     <br />  
+                          <a href="Add_Patient.aspx" target="" class="icon-block-cta">Add New Patient</a>
+                     <br />  
+                     <br />
                         <p>Physicians can add new patients to our Pharmacy Database here:</p>
-                    </div></div></div><br />
-                    <br />
-                </div>
- </div><br /><br /><br />
+           </div></div></div>
+           <br />
+           <br />
+           </div>
+ </div>
+    <br />
+    <br />
+    <br />
    <div>
          <table style="text-align:center" align="center">
        <tr> 

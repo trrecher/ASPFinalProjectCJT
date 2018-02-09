@@ -148,17 +148,25 @@
         <h2>Welcome to Louis' Pharmacy </h2>
       </div> 
       <div class="row">
-        <div class="column">
+          
+          <div style="float:left;width:2%">&nbsp</div>
+
+        <div class="column" >
           <h3>Doctor</h3>
             <a href="Add_Physician.aspx">Add Physician</a>
             <a href="Search_Physician.aspx">Search Physician</a>
-
         </div>
+
+          <div style="float:left;width:2%">&nbsp</div>
+
         <div class="column">
           <h3>Patient</h3>
           <a href="Add_Patient.aspx">Add Patient </a>   
           <a href="Search_Patient.aspx">Search Patient</a>
         </div>
+          
+          <div style="float:left;width:2%">&nbsp</div>
+          
         <div class="column">
           <h3>Prescription</h3>
           <a href="Add_Prescription.aspx">Add Prescription</a>

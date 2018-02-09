@@ -78,15 +78,16 @@
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 20%;
-    padding: 5%;
+    width: 25%;
+    padding: 3%;
     background-color: #ccc;
-    height: 150px;
+    height: 250px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
 
     /* Style links inside the columns */
     .column a {

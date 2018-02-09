@@ -56,8 +56,8 @@
         </tr>
            <tr>
                <td colspan="2">
-                   <asp:Button ID="btnPresciptionEdit" runat="server" Text="Edit" />
-                   <asp:Label ID="lblError" runat="server"></asp:Label>
+                   <asp:Button ID="btnPresciptionEdit" runat="server" Text="Edit Prescription" style="height:50px"/>
+                   <asp:Label ID="lblError" runat="server" Font-Size="X-Large"></asp:Label>
                </td>
            </tr>
     </table>

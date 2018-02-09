@@ -175,7 +175,6 @@ Partial Class Search_Prescription
         Dim recordToBeFilled As String
 
         Try
-
             'Get the record
             recordToBeFilled = Trim(e.CommandArgument)
 

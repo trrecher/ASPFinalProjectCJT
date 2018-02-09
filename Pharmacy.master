@@ -171,7 +171,7 @@
           <h3>Prescription</h3>
           <a href="Add_Prescription.aspx">Add Prescription</a>
           <a href="Edit_Prescription.aspx">Delete Prescription</a>
-          <a href="Search_Prescription.aspx">Search Prescription</a>
+          <a href="Search_Prescription.aspx">Search Prescription / Add Refill</a>
           <a href="Edit_Prescription.aspx">Update Prescription</a>
         </div>
       </div>

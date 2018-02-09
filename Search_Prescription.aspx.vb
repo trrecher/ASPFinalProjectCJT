@@ -146,6 +146,7 @@ Partial Class Search_Prescription
 
                 'refresh datagrid
                 loadPrescriptionSearch()
+                reBindPrescriptionGrid()
 
             End If
 

@@ -145,7 +145,7 @@ Partial Class Search_Refill
             Dim chk As CheckBox
             Dim lbl As Label
             Dim RefillID As Integer
-            Dim aDatatier As New prescriptionDataTier
+            Dim aDatatier As New RefillDataTier
             If grdSearchedRefill.Rows.Count > 0 Then
 
                 'For Each row
@@ -157,13 +157,14 @@ Partial Class Search_Refill
                         lbl = CType(row.Controls(0).FindControl("hidRefillID"), Label)
                         RefillID = CType(lbl.Text, Int32)
                         ''delete the record one at a time
-                        aDatatier.deletePrescription(RefillID)
+                        aDatatier.deleteRefill(RefillID)
 
                     End If
                 Next
 
                 'refresh datagrid
                 loadRefillSearch()
+                reBindRefillGrid()
 
             End If
 
@@ -196,5 +197,8 @@ Partial Class Search_Refill
             loadRefillSearch()
             reBindRefillGrid()
         End If
+    End Sub
+    Protected Sub Delete_Click(sender As Object, e As EventArgs) Handles grdSearchedRefill.SelectedIndexChanged
+
     End Sub
 End Class

@@ -7,6 +7,7 @@
             /*width: 100%*/
         }
     </style>
+    <link href="formLayout.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
 
         function SelectAll(id) {
@@ -80,7 +81,7 @@
             <td>Patient&#39;s ID:</td>
             <td>
                 <asp:TextBox ID="txtPatientID" runat="server" TextMode="Number"></asp:TextBox>
-                <asp:Button ID="btnPatientID" runat="server" Text="..." />
+                <asp:Button ID="btnPatientID" runat="server" Text="..." CausesValidation="False" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPatientID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -92,7 +93,7 @@
             <td>Physician&#39;s ID:</td>
             <td>
                 <asp:TextBox ID="txtPhysicianID" runat="server" TextMode="Number"></asp:TextBox>
-                <asp:Button ID="btnPhysicianID" runat="server" Text="..." />
+                <asp:Button ID="btnPhysicianID" runat="server" Text="..." CausesValidation="False" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPhysicianID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -180,7 +181,6 @@
                                 <asp:Label ID="lblPatientID" runat="server" Text="Patient ID: "></asp:Label>
                             </td>
                             <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPatientID" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="TextBox1" runat="server" TextMode="Number"></asp:TextBox>
                             </td>
                             <td>
@@ -194,7 +194,6 @@
                         <tr>
                             <td>Patient Name:</td>
                             <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtPatientName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="txtPatientName" runat="server"></asp:TextBox>
                             </td>
                             <td>
@@ -206,7 +205,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <asp:Button ID="btnSearchPatient" runat="server" Text="Search" OnClick="btnSearchPatient_Click"  />
+                                <asp:Button ID="btnSearchPatient" runat="server" Text="Search" OnClick="btnSearchPatient_Click" CausesValidation="False"  />
                             </td>
                             <td>
                                 
@@ -297,7 +296,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <asp:Button ID="btnSearchPhysician" runat="server" Text="Search" OnClick="btnSearchPhysician_Click"  />
+                                <asp:Button ID="btnSearchPhysician" runat="server" Text="Search" OnClick="btnSearchPhysician_Click" CausesValidation="False"  />
                             </td>
                             <td>
                                 Physician Specialty:</td>

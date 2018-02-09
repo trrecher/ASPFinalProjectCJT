@@ -130,7 +130,7 @@
                                         &nbsp;&nbsp;
                                     </ItemTemplate>
                                     <ItemTemplate>
-                                        <asp:ImageButton ID="imgDelete" runat="server" CausesValidation="false" CommandArgument="<% # Eval(RefillID)%>" CommandName="lbtnDelete" Height="30" ImageUrl="~/images/delete.jpg" OnCommand="Delete_Click" Width="30" />
+                                        <asp:ImageButton ID="imgDelete" runat="server" CausesValidation="false" CommandArgument="<% # Eval(RefillID)%>" CommandName="lbtnDelete" Height="30" ImageUrl="~/images/delete.png" OnCommand="Delete_Click" Width="30" />
                                         ||
                                         <asp:ImageButton ID="imgEdit" runat="server" CausesValidation="false" CommandArgument="<% # Eval(RefillID) %>" CommandName="lbtnEdit" Height="30" ImageUrl="~/images/edit.jpg" OnCommand="lbtnEdit_Click" Width="30" />
                                     </ItemTemplate>

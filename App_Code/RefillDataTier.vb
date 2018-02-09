@@ -48,7 +48,7 @@ Public Class RefillDataTier
                 Return outcome
             End With
         Catch ex As Exception
-            Return -1
+            Return -2
             Throw New Exception(ex.Message)
         Finally
             connString.Close()
@@ -72,7 +72,7 @@ Public Class RefillDataTier
                 '.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = physicianID
 
 
-                .ExecuteReader()
+                .ExecuteNonQuery()
             End With
             Return 1
         Catch ex As Exception

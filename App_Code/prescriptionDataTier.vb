@@ -57,7 +57,7 @@ Public Class prescriptionDataTier
                 .Parameters.Add("@DRUGDOSAGE", SqlDbType.VarChar, 40).Value = drugDoseage
                 .Parameters.Add("@intakeMethod", SqlDbType.VarChar, 50).Value = intakeMethod
                 .Parameters.Add("@drugFrequency", SqlDbType.VarChar, 50).Value = drugFrequency
-                If maxRefills <> Nothing Then
+                If maxRefills <> 0 Then
                     .Parameters.Add("@maxRefills", SqlDbType.Int).Value = maxRefills
                 End If
                 '.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = physicianID
@@ -75,7 +75,7 @@ Public Class prescriptionDataTier
         End Try
     End Function
 
-    Public Function deletePrescription(rxNumber As String) As Integer
+    Public Function deletePrescription(rxNumber As Integer) As Integer
         Try
             cmdStringConfig()
 
@@ -91,7 +91,7 @@ Public Class prescriptionDataTier
                 '.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = physicianID
 
 
-                .ExecuteReader()
+                .ExecuteNonQuery()
                 Return 1
             End With
         Catch ex As Exception

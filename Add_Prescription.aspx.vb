@@ -266,7 +266,12 @@ Partial Class Add_Prescription
             expirationDate = CType(txtExpirationDate.Text, Date)
             patientID = CType(txtPatientID.Text, Int32)
             physicianID = CType(txtPhysicianID.Text, Int32)
-            maxRefill = CType(txtRefills.Text, Int32)
+            Try
+                maxRefill = CType(txtRefills.Text, Int32)
+            Catch ex As Exception
+                maxRefill = Nothing
+            End Try
+
             outcome = aDataTier.addPrescription(patientID, physicianID, MedicineName, expirationDate, prescibedDate, Description, Dosage, Intake, Frequency, maxRefill)
         Catch ex As Exception
 

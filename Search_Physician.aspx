@@ -13,7 +13,7 @@
 
     <script type="text/javascript">
 
-        function SelectAllPhysician(id) {
+        function SelectAll(id) {
             //get reference of GridView control
             var grid = document.getElementById("<%= grdSearchedPhysician.ClientID %>");
             //variable to contain the cell of the grid

@@ -48,7 +48,7 @@
             <td>RxNumber:</td>
             <td>
                 <asp:TextBox ID="txtRxNumber" runat="server" TextMode="Number"></asp:TextBox>
-                <asp:Button ID="btnRxNumber" runat="server" Text="..." />
+                <asp:Button ID="btnRxNumber" runat="server" Text="..." CausesValidation="False" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRxNumber" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -119,7 +119,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <asp:Button ID="btnSearchPrescription" runat="server" Text="Search" OnClick="btnSearchPrescription_Click"  />
+                                <asp:Button ID="btnSearchPrescription" runat="server" Text="Search" OnClick="btnSearchPrescription_Click" CausesValidation="False"  />
                             </td>
                             <td>
                                 &nbsp;</td>

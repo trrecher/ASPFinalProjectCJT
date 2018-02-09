@@ -130,13 +130,13 @@ Partial Class Add_Refill
 
             outcome = aDataTier.addRefill(RxNumber)
         Catch ex As Exception
-
+            outcome = -1
         End Try
 
-        If outcome = 1 Then
+        If outcome = 0 Then
             lblError.Text = "Record Added"
-        ElseIf outcome = 0 Then
-            lblError.Text = "Input Error"
+        ElseIf outcome = -1 Then
+            lblError.Text = "input invalid"
         ElseIf outcome = -2 Then
             lblError.Text = "Refills Exceeded"
         Else

@@ -119,11 +119,11 @@
                                         &nbsp;&nbsp;
                                     </ItemTemplate>
                                     <ItemTemplate>
-                                        <asp:ImageButton ID="imgDelete" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID)%>" CommandName="lbtnDelete" Height="30" ImageUrl="~/images/delete.jpg" OnCommand="Delete_Click" Width="30" />
+                                        <asp:ImageButton ID="imgDelete" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID)%>" CommandName="lbtnDelete" Height="30" ImageUrl="~/images/delete.png" OnCommand="Delete_Click" Width="30" />
                                         ||
                                         <asp:ImageButton ID="imgEdit" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID) %>" CommandName="lbtnEdit" Height="30" ImageUrl="~/images/edit.jpg" OnCommand="lbtnEdit_Click" Width="30" />
                                         ||
-                                        <asp:ImageButton ID="imgAddRefill" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID) %>" CommandName="lbtnAddRefill" Height="30" ImageUrl="~/images/plus.jpg" OnCommand="lbtnAddRefill_Click" Width="30" />
+                                        <asp:ImageButton ID="imgAddRefill" runat="server" CausesValidation="false" CommandArgument="<% # Eval(PrescriptionID) %>" CommandName="lbtnAddRefill" Height="30" ImageUrl="~/images/plus.png" OnCommand="lbtnAddRefill_Click" Width="30" />
                                     </ItemTemplate>
                                     <HeaderStyle HorizontalAlign="Left" />
                                 </asp:TemplateField>

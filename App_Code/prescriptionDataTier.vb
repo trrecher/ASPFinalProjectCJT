@@ -114,42 +114,52 @@ Public Class prescriptionDataTier
                                       ) As DataSet
         Try
             cmdStringConfig()
+            Dim aDataSet As New DataSet
 
             With cmdString 'specifying SQL
+                If patientName IsNot Nothing Or
+                        physicianName IsNot Nothing Or
+                        drugName IsNot Nothing Or
+                        prescribedStartDateBound.Date <> Nothing Or
+                        prescribedStopDateBound.Date <> Nothing Or
+                        RxNumber <> 0 Then
 
-                .CommandText = "SEARCH_PRESCRIPTION" 'SQL stored procedure
+                    .CommandText = "SEARCH_PRESCRIPTION" 'SQL stored procedure
 
-                'how to package values from app to SQL language
-                'what in SQL is = to variable in app
+                    'how to package values from app to SQL language
+                    'what in SQL is = to variable in app
 
-                .Parameters.Add("@patientName", SqlDbType.VarChar, 51).Value = patientName
-                .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
-                .Parameters.Add("@drugName", SqlDbType.VarChar, 60).Value = physicianName
-                If prescribedStartDateBound.Date <> Nothing Then
-                    .Parameters.Add("@prescribedStartDateBound", SqlDbType.Date).Value = prescribedStartDateBound
+                    .Parameters.Add("@patientName", SqlDbType.VarChar, 51).Value = patientName
+                    .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
+                    .Parameters.Add("@drugName", SqlDbType.VarChar, 60).Value = physicianName
+                    If prescribedStartDateBound.Date <> Nothing Then
+                        .Parameters.Add("@prescribedStartDateBound", SqlDbType.Date).Value = prescribedStartDateBound
+                    End If
+
+                    If prescribedStopDateBound.Date <> Nothing Then
+                        .Parameters.Add("@prescribedStopDateBound", SqlDbType.Date).Value = prescribedStopDateBound
+                    End If
+
+                    If RxNumber <> 0 Then
+                        .Parameters.Add("@RxNumber", SqlDbType.Int).Value = RxNumber
+                    End If
+
+
+
+                    '.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = physicianID
+
+
+                    Dim aAdapter As New SqlClient.SqlDataAdapter
+                    aAdapter.SelectCommand = cmdString
+
+                    'fill adapater
+                    aAdapter.Fill(aDataSet)
+
+                    'return dataSet
+                Else
+
+                    aDataSet = Nothing
                 End If
-
-                If prescribedStopDateBound.Date <> Nothing Then
-                    .Parameters.Add("@prescribedStopDateBound", SqlDbType.Date).Value = prescribedStopDateBound
-                End If
-
-                If RxNumber <> 0 Then
-                    .Parameters.Add("@RxNumber", SqlDbType.Int).Value = RxNumber
-                End If
-
-
-
-                '.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = physicianID
-
-
-                Dim aAdapter As New SqlClient.SqlDataAdapter
-                aAdapter.SelectCommand = cmdString
-                Dim aDataSet As New DataSet
-
-                'fill adapater
-                aAdapter.Fill(aDataSet)
-
-                'return dataSet
                 Return aDataSet
             End With
         Catch ex As Exception

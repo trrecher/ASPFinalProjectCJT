@@ -97,6 +97,7 @@ Public Class RefillDataTier
                                 ) As DataSet
         Try
             cmdStringConfig()
+            Dim aDataSet As New DataSet
 
             With cmdString 'specifying SQL
 
@@ -105,41 +106,53 @@ Public Class RefillDataTier
                 'how to package values from app to SQL language
                 'what in SQL is = to variable in app
 
-                If RefillID <> 0 Then
-                    .Parameters.Add("@refillID", SqlDbType.Int).Value = RefillID
+                If RefillID <> 0 Or
+                        patientName IsNot Nothing Or
+                        physicianName IsNot Nothing Or
+                        drugName IsNot Nothing Or
+                        prescribedStartDateBound.Date <> Nothing Or
+                        prescribedStopDateBound.Date <> Nothing Or
+                        refillStartDateBound.Date <> Nothing Or
+                        refillStopDateBound.Date <> Nothing Or
+                        RxNumber <> 0 Then
+                    If RefillID <> 0 Then
+                        .Parameters.Add("@refillID", SqlDbType.Int).Value = RefillID
+                    End If
+
+                    If RxNumber <> 0 Then
+                        .Parameters.Add("@RxNumber", SqlDbType.Int).Value = RxNumber
+                    End If
+
+                    .Parameters.Add("@patientName", SqlDbType.VarChar, 51).Value = patientName
+                    .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
+                    .Parameters.Add("@drugName", SqlDbType.VarChar, 60).Value = physicianName
+                    If prescribedStartDateBound.Date <> Nothing Then
+                        .Parameters.Add("@prescribedStartDateBound", SqlDbType.Date).Value = prescribedStartDateBound
+                    End If
+
+                    If prescribedStopDateBound <> Nothing Then
+                        .Parameters.Add("@prescribedStopDateBound", SqlDbType.Date).Value = prescribedStopDateBound
+                    End If
+
+                    If refillStartDateBound <> Nothing Then
+                        .Parameters.Add("@refillStopDateBound", SqlDbType.Date).Value = refillStopDateBound
+                    End If
+
+                    If refillStopDateBound <> Nothing Then
+                        .Parameters.Add("@refillStopDateBound", SqlDbType.Date).Value = refillStopDateBound
+                    End If
+
+                    Dim aAdapter As New SqlClient.SqlDataAdapter
+                    aAdapter.SelectCommand = cmdString
+
+
+                    'fill adapater
+                    aAdapter.Fill(aDataSet)
+
+                    'return dataSet
+                Else
+                    aDataSet = Nothing
                 End If
-
-                If RxNumber <> 0 Then
-                    .Parameters.Add("@RxNumber", SqlDbType.Int).Value = RxNumber
-                End If
-
-                .Parameters.Add("@patientName", SqlDbType.VarChar, 51).Value = patientName
-                .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
-                .Parameters.Add("@drugName", SqlDbType.VarChar, 60).Value = physicianName
-                If prescribedStartDateBound.Date <> Nothing Then
-                    .Parameters.Add("@prescribedStartDateBound", SqlDbType.Date).Value = prescribedStartDateBound
-                End If
-
-                If prescribedStopDateBound <> Nothing Then
-                    .Parameters.Add("@prescribedStopDateBound", SqlDbType.Date).Value = prescribedStopDateBound
-                End If
-
-                If refillStartDateBound <> Nothing Then
-                    .Parameters.Add("@refillStopDateBound", SqlDbType.Date).Value = refillStopDateBound
-                End If
-
-                If refillStopDateBound <> Nothing Then
-                    .Parameters.Add("@refillStopDateBound", SqlDbType.Date).Value = refillStopDateBound
-                End If
-
-                Dim aAdapter As New SqlClient.SqlDataAdapter
-                aAdapter.SelectCommand = cmdString
-                Dim aDataSet As New DataSet
-
-                'fill adapater
-                aAdapter.Fill(aDataSet)
-
-                'return dataSet
                 Return aDataSet
             End With
         Catch ex As Exception

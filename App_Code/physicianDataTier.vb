@@ -89,35 +89,45 @@ Public Class PhysicianDataTier
         Try
             cmdStringConfig()
 
+            Dim aDataSet As New DataSet
+
             With cmdString 'specifying SQL
 
-                .CommandText = "SEARCH_PHYSICIAN" 'SQL stored procedure
+                If DOBstartBound.Date <> Nothing Or
+                        DOBstopBound.Date <> Nothing Or
+                        physicianName IsNot Nothing Or
+                        physicianspecialty IsNot Nothing Or
+                        physicianID <> 0 Then
+                    .CommandText = "SEARCH_PHYSICIAN" 'SQL stored procedure
 
-                'how to package values from app to SQL language
-                'what in SQL is = to variable in app
+                    'how to package values from app to SQL language
+                    'what in SQL is = to variable in app
 
-                If DOBstartBound.Date <> Nothing Then
-                    .Parameters.Add("@DOBstartBound", SqlDbType.Date).Value = DOBstartBound
+                    If DOBstartBound.Date <> Nothing Then
+                        .Parameters.Add("@DOBstartBound", SqlDbType.Date).Value = DOBstartBound
+                    End If
+
+                    If DOBstopBound.Date <> Nothing Then
+                        .Parameters.Add("@DOBstopBound", SqlDbType.Date).Value = DOBstopBound
+                    End If
+
+                    .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
+                    .Parameters.Add("@physicianSpecialty", SqlDbType.VarChar, 40).Value = physicianspecialty
+                    If physicianID <> 0 Then
+                        .Parameters.Add("@physicianID", SqlDbType.Int).Value = physicianID
+                    End If
+
+
+
+                    Dim aAdapter As New SqlClient.SqlDataAdapter
+                    aAdapter.SelectCommand = cmdString
+
+                    'fill adapater
+                    aAdapter.Fill(aDataSet)
+
+                Else
+                    aDataSet = Nothing
                 End If
-
-                If DOBstopBound.Date <> Nothing Then
-                    .Parameters.Add("@DOBstopBound", SqlDbType.Date).Value = DOBstopBound
-                End If
-
-                .Parameters.Add("@physicianName", SqlDbType.VarChar, 51).Value = physicianName
-                .Parameters.Add("@physicianSpecialty", SqlDbType.VarChar, 40).Value = physicianspecialty
-                If physicianID <> 0 Then
-                    .Parameters.Add("@physicianID", SqlDbType.Int).Value = physicianID
-                End If
-
-
-
-                Dim aAdapter As New SqlClient.SqlDataAdapter
-                aAdapter.SelectCommand = cmdString
-                Dim aDataSet As New DataSet
-
-                'fill adapater
-                aAdapter.Fill(aDataSet)
 
                 'return dataSet
                 Return aDataSet

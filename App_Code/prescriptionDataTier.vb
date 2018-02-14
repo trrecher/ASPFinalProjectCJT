@@ -117,9 +117,9 @@ Public Class prescriptionDataTier
             Dim aDataSet As New DataSet
 
             With cmdString 'specifying SQL
-                If patientName IsNot Nothing Or
-                        physicianName IsNot Nothing Or
-                        drugName IsNot Nothing Or
+                If patientName <> "" Or
+                        physicianName <> "" Or
+                        drugName <> "" Or
                         prescribedStartDateBound.Date <> Nothing Or
                         prescribedStopDateBound.Date <> Nothing Or
                         RxNumber <> 0 Then

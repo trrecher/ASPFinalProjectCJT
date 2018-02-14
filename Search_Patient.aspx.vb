@@ -86,8 +86,11 @@ Partial Class Search_Patient
                 DOBStop = Nothing
             End Try
             aDataSet = aDataTier.searchPatient(DOBStart, DOBStop, patientName, patientID) 'optional parameter synatx when out of order
-            aDataView = aDataSet.Tables(0).DefaultView
-            Cache.Insert(PagePatientTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+
+            If aDataSet IsNot Nothing Then
+                aDataView = aDataSet.Tables(0).DefaultView
+                Cache.Insert(PagePatientTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+            End If
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

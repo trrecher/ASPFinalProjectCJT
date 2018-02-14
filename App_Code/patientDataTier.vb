@@ -93,7 +93,7 @@ Public Class patientDataTier
             With cmdString 'specifying SQL
                 If patientDOBStartBound.Date <> Nothing Or
                         patientDOBStopBound.Date <> Nothing Or
-                        patientName IsNot Nothing Or
+                        patientName <> "" Or
                         patientID <> 0 Then
                     .CommandText = "SEARCH_PATIENT" 'SQL stored procedure
 

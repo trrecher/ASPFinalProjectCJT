@@ -107,9 +107,9 @@ Public Class RefillDataTier
                 'what in SQL is = to variable in app
 
                 If RefillID <> 0 Or
-                        patientName IsNot Nothing Or
-                        physicianName IsNot Nothing Or
-                        drugName IsNot Nothing Or
+                        patientName <> "" Or
+                        physicianName <> "" Or
+                        drugName <> "" Or
                         prescribedStartDateBound.Date <> Nothing Or
                         prescribedStopDateBound.Date <> Nothing Or
                         refillStartDateBound.Date <> Nothing Or

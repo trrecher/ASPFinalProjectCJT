@@ -95,8 +95,8 @@ Public Class PhysicianDataTier
 
                 If DOBstartBound.Date <> Nothing Or
                         DOBstopBound.Date <> Nothing Or
-                        physicianName IsNot Nothing Or
-                        physicianspecialty IsNot Nothing Or
+                        physicianName <> "" Or
+                        physicianspecialty <> "" Or
                         physicianID <> 0 Then
                     .CommandText = "SEARCH_PHYSICIAN" 'SQL stored procedure
 

@@ -89,8 +89,11 @@ Partial Class Add_Refill
             End Try
 
             aDataSet = aDataTier.searchPrescription(patient, physician, drugName, DateStart, DateStop, RxNumber)
-            aDataView = aDataSet.Tables(0).DefaultView
-            Cache.Insert(PagePrescriptionTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+
+            If aDataSet IsNot Nothing Then
+                aDataView = aDataSet.Tables(0).DefaultView
+                Cache.Insert(PagePrescriptionTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+            End If
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

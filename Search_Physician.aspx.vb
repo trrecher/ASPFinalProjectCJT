@@ -88,8 +88,10 @@ Partial Class Search_Physician
             End Try
 
             aDataSet = aDataTier.searchPhysician(DOBStart, DOBStop, PhysicianName, Specialty, PhysicianID) 'optional parameter synatx when out of order
-            aDataView = aDataSet.Tables(0).DefaultView
-            Cache.Insert(PagePhysicianTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+            If aDataSet IsNot Nothing Then
+                aDataView = aDataSet.Tables(0).DefaultView
+                Cache.Insert(PagePhysicianTable, aDataView, Nothing, Caching.Cache.NoAbsoluteExpiration, System.TimeSpan.FromMinutes(10), Caching.CacheItemPriority.Default, Nothing)
+            End If
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
